@@ -1,8 +1,17 @@
+import { fileURLToPath, URL } from 'url'
 import { defineConfig } from 'vite'
+import svgr from 'vite-plugin-svgr'
+import tsconfigPaths from 'vite-tsconfig-paths'
 
 import react from '@vitejs/plugin-react-swc'
-
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  resolve: {
+    alias: [{ find: '@', replacement: fileURLToPath(new URL('./src', import.meta.url)) }],
+  },
+  plugins: [
+    react({ plugins: [['@swc/plugin-styled-components', { displayName: true, fileName: false }]] }),
+    tsconfigPaths(),
+    svgr(),
+  ],
 })
