@@ -1,15 +1,18 @@
 import React from 'react'
 
-import { Link, Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 
-import { AppRoutes } from '@routes'
+import { Header } from '@components'
+
+import * as S from './main-layout.styled'
 
 export const MainLayout: React.FC = () => {
   return (
-    <div>
-      <Link to={AppRoutes.Promo}>Promo</Link>
-      <Link to={AppRoutes.Dashboard}>Dashboard</Link>
-      <Outlet />
-    </div>
+    <>
+      <Header />
+      <S.Content>
+        <Outlet />
+      </S.Content>
+    </>
   )
 }

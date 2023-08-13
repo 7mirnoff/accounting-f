@@ -35,6 +35,7 @@
       "@layouts": ["./layouts"],
       "@routes": ["./routes"],
       "@pages": ["./pages"],
+      "@components": ["./components"],
       //      "@modules": ["./modules/index"],
       //      "@utils": ["./utils/index"],
       //      "@data": ["./data/index"],

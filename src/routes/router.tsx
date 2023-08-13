@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 
 import { MainLayout } from '@layouts'
-import { Dashboard, Promo } from '@pages'
+import { Dashboard, Login, Promo } from '@pages'
 
 import { AppRoutes } from './routes'
 
@@ -18,6 +18,10 @@ export const router = createBrowserRouter([
       {
         path: AppRoutes.Dashboard,
         element: <Dashboard />,
+      },
+      {
+        path: AppRoutes.Login,
+        element: <Login />,
       },
 
       // Только неавторизованные
