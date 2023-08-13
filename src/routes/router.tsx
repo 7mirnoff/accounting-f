@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 
 import { MainLayout } from '@layouts'
-import { Dashboard, Login, Promo } from '@pages'
+import { Assets, Dashboard, Login, Promo } from '@pages'
 
 import { AppRoutes } from './routes'
 
@@ -22,6 +22,10 @@ export const router = createBrowserRouter([
       {
         path: AppRoutes.Login,
         element: <Login />,
+      },
+      {
+        path: AppRoutes.Assets,
+        element: <Assets />,
       },
 
       // Только неавторизованные

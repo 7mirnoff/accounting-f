@@ -10,7 +10,8 @@ export const Header: React.FC = () => {
   return (
     <S.Header>
       <Link to={AppRoutes.Promo}>Promo</Link>
-      <Link to={AppRoutes.Dashboard}>Dashboard</Link>
+      <Link to={AppRoutes.Dashboard}>Главная</Link>
+      <Link to={AppRoutes.Assets}>Активы</Link>
       <Link to={AppRoutes.Login}>Login</Link>
     </S.Header>
   )
